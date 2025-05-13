@@ -1,19 +1,35 @@
 from exercicios04 import calcular_media
 
+alunos = []
 
-def adicionar_aluno(nome, email, serie, nota01=0, nota02=0, nota03=0):
-    dados_alunos = []
+def obter_dados_alunos():
+    nome_aluno = input("informe o nome completo do aluno:")
+    email_aluno = input("informe o email do aluno:")
+    serie_aluno = input("informe a serie do aluno:")
+    nota01_aluno = float(input("informe a primeira nota do aluno:"))
+    nota02_aluno = float(input("informe a segunda nota do aluno:"))
+    nota03_aluno = float(input("informe a terceira nota do aluno:"))
+
+    return cadastrar_aluno(nome_aluno, email_aluno, serie_aluno, nota01_aluno, nota02_aluno, nota03_aluno)
+
+def cadastrar_aluno(aluno, email, serie, nota01=0, nota02=0, nota03=0):
 
     notas = [nota01, nota02, nota03]
 
     aluno = {
-        "nome": nome,
-        "email": email,
-        "serie": serie,
-        "nota": notas,
-        "media": calcular_media(notas)
-    }
-    dados_alunos.append(aluno)
-    return dados_alunos
+            "aluno": aluno,
+            "email": email,
+            "serie": serie,
+            "nota": notas,
+            "media": calcular_media(notas)
+}
+    alunos.append(aluno)
+    
+    return aluno
 
-print(adicionar_aluno("Richard", "richard564@gmail.com", "2b série", 10, 10, 10))
+obter_dados_alunos()
+
+def mostrar_dados_alunos(dados_alunos):
+    return print(dados_alunos)
+
+mostrar_dados_alunos(alunos)
