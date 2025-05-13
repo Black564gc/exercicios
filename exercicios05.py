@@ -27,9 +27,29 @@ def cadastrar_aluno(aluno, email, serie, nota01=0, nota02=0, nota03=0):
     
     return aluno
 
-obter_dados_alunos()
-
 def mostrar_dados_alunos(dados_alunos):
-    return print(dados_alunos)
+    for aluno in dados_alunos:print(f"Nome do aluno: {aluno["nome"]} | Email do aluno: {aluno["email"]} | Série do aluno {aluno["serie"]} | Notas do aluno{aluno["notas"]} Média do aluno {aluno["media"]}")            
 
-mostrar_dados_alunos(alunos)
+    return
+    
+def iniciar_sistema():
+    while True:
+        print("=" *80)
+        print("opcao 1 => mostrar lista de alunos cadastrado.")
+        print("opcao 21" \
+        " => cadastrar alunos.")
+        print("opcao 3 => sair do sistema.")
+        print("=" *80)
+
+
+        opcao = input("escolha umas das opcoes acima: ")
+
+        if opcao == "1":
+            mostrar_dados_alunos(alunos)
+        elif opcao =="2":
+            obter_dados_alunos()
+        else:
+            print("sistema finalizado")
+            break
+
+iniciar_sistema()            
