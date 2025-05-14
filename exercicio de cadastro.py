@@ -1,11 +1,11 @@
-from exercicio04 import calcular_media
+from exercicios04 import calcular_media
 
 cadastros = []
 
 def obter_dados_cadastro():
     nome_ = input("INFORME O NOME COMPLETO PARA O CADASTRO: ")
-    cpf = input("INFORME O CPF PARA O CADASTRO: ")
-    rg = input("INFORME O RG PARA O CADASTRO: ")
+    cpf = int(input("INFORME O CPF PARA O CADASTRO: "))
+    rg = int(input("INFORME O RG PARA O CADASTRO: "))
     data_nascimento = input("INFORME A DATA DE NASCIMENTO PARA O CADASTRO (DD/MM/AAAA): ")
     endereco = input("INFORME O ENDEREÇO PARA O CADASTRO: ")
     cidade = input("INFORME A CIDADE PARA O CADASTRO: ")
@@ -15,6 +15,7 @@ def obter_dados_cadastro():
     email_cadastro = input("INFORME O EMAIL PARA O CADASTRO: ")
 
     return adicionar_cadastro(nome_, cpf, rg, data_nascimento, endereco, cidade, estado, telefone, celular, email_cadastro)
+
 
 def adicionar_cadastro(nome, cpf, rg, data_nascimento, endereco, cidade, estado, telefone, celular, email):
 
