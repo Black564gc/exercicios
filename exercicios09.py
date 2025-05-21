@@ -14,3 +14,5 @@ def carregar_dados():
 funcionarios = carregar_dados()
 for funcionario in funcionarios:
     print(f"Nome do funcionario: {funcionario["nome"]}, Salário do funcionario: {funcionario["salario"]}")
+else:
+    print("funcionario nao encontrado")
