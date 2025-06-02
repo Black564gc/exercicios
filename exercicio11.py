@@ -54,18 +54,18 @@ def iniciar_sistema():
         print("Opção 3 - Sair do Sistema")
         print("=" * 80)
 
-   opcao = input("Escolha uma das opções do Menu: ")
+opcao = input("Escolha uma das opções do Menu: ")
 
-        if opcao == "1":
-            mostrar_dados_veiculos(veiculos)
-        elif opcao == "2":
+if opcao == "1":
+               mostrar_dados_veiculos("veiculo")
+elif opcao == "2":
             cadastrar_veiculo(obter_dados_veiculo())
             veiculos = carregar_dados()
-        elif opcao == "3":
+elif opcao == "3":
             print("Sistema Finalizado")
-            break
-        else:
-            print("Opção inválida, escolha uma das opções no menu.")
+            
+else:
+ print("Opção inválida, escolha uma das opções no menu.")
 
 if __name__ == "__main__":
     iniciar_sistema()
